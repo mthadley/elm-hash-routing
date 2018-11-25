@@ -1,0 +1,13 @@
+{
+  "name": "elm-hash-routing",
+  "version": "1.0.0",
+  "description": "Create single page applications with hash-routing",
+  "private": true,
+  "dependencies": {},
+  "author": "Michael Hadley",
+  "license": "MIT",
+  "devDependencies": {
+    "elm": "^0.19.0-bugfix2",
+    "elm-test": "^0.19.0-rev3"
+  }
+}
