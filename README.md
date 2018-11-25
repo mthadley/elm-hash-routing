@@ -7,8 +7,8 @@ A small wrapper around `Browser.application` that enables easy hash routing!
 Before using this package, make sure you have a good idea of how
 applications are structured in Elm. Here are some good resources:
 
-* [The Official Guide](elm-guide)
-* [`elm/browser`](elm/browser)
+* [The Official Guide][elm-guide]
+* [`elm/browser`][elm/browser]
 
 If you are already up to speed on these, then skip to the next section!
 
@@ -21,7 +21,8 @@ a Url.
 
 However, sometimes you may not have control of the server or it's routing logic.
 A common example is a single page application on a static hosting service, like
-Github pages. In cases like this, you can use `Browser.Hash.application` to keep your Url parsing the same.
+Github pages. In cases like this, you can use `Browser.Hash.application` to keep
+your Url parsing the same.
 
 ## Usage
 
@@ -55,20 +56,25 @@ main =
         }
 ```
 
-Now the `Url` that your `onUrlChange` messages recieve will appear as if you using server routing! The fragment is essentially moved to the `path` of the `Url`, with some extra processing to make sure everything is consistent.
-
-If you decide to migrate away from hash routing in the future, you just need to switch back to `Browser.application`, while your url parsing can remain the same.
+Now the `Url` that your `onUrlChange` messages recieve will appear as if you are
+using server routing! The fragment is essentially moved to the `path` of the
+`Url`, with some extra processing to make sure everything is consistent.
 
 You'll still need to be mindful of any internal links you create in your
 application. Make sure to prefix them with a `#`.
 
+If you decide to migrate away from hash routing in the future, you just need to
+switch back to `Browser.application`, and your url parsing can remain the same.
+
 ## Coming from Elm 0.18
 
-This can be used to replace the behavior provided by [`parseHash`](parseHash) in
-the `evancz/url-parser` package. It was removed in Elm `0.19`, however we can
-easily replicate hash routing in this package with the tools provided in `elm/browser`
-and `elm/url`!
+This can be used to replace the behavior provided by [`parseHash`][parseHash] in
+the [`evancz/url-parser`][evancz/url-parser] package. It was removed in Elm
+`0.19`, however we can easily replicate hash routing in this package with the
+tools provided in [`elm/browser`][elm/browser] and [`elm/url`][elm/url]!
 
 [elm-guide]: https://guide.elm-lang.org/
 [parseHash]: https://package.elm-lang.org/packages/evancz/url-parser/latest/UrlParser#parseHash
 [elm/browser]: https://package.elm-lang.org/packages/elm/browser/latest/
+[elm/url]: https://package.elm-lang.org/packages/elm/url/latest/
+[evancz/url-parser]: https://package.elm-lang.org/packages/evancz/url-parser/latest/

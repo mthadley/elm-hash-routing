@@ -1,7 +1,7 @@
 module Browser.Hash exposing (application)
 
 {-| Check out the README for more a more in depth explanation of why
-this package exists. Otherwise, skip down [`application`[(#application)] to
+this package exists. Otherwise, skip down [`application`](#application) to
 get started.
 
 @docs application
@@ -14,11 +14,11 @@ import Browser.Navigation exposing (Key)
 import Url exposing (Url)
 
 
-{-| A replacement for [`Browser.application`](browser-application) that
+{-| A replacement for [`Browser.application`][browser-application] that
 will automatically process your hash-based Url's into ones that will work
-out of the box with the standard parsing logic of [`Url.Parser`](urlparser).
+out of the box with the standard parsing logic of [`Url.Parser`][urlparser].
 
-It's usage is the same as [`Browser.application`](browser-application):
+It's usage is the same as [`Browser.application`][browser-application]:
 
     import Browser.Hash as Hash
 
